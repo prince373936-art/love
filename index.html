@@ -27,6 +27,8 @@ body{
     overflow-x:hidden;
 }
 
+/* BACKGROUND */
+
 .background{
     position:fixed;
     width:100%;
@@ -35,6 +37,7 @@ body{
     radial-gradient(circle at top left,#ff4d88 0%,transparent 25%),
     radial-gradient(circle at bottom right,#ff0066 0%,transparent 25%),
     #121212;
+
     z-index:-2;
 }
 
@@ -46,6 +49,8 @@ body{
     z-index:-1;
 }
 
+/* MAIN */
+
 .hero{
     min-height:100vh;
     display:flex;
@@ -54,20 +59,30 @@ body{
     padding:30px;
 }
 
+/* CARD */
+
 .spotify-card{
+
     width:100%;
     max-width:420px;
+
     background:rgba(25,25,25,0.85);
+
     border-radius:35px;
+
     padding:30px;
+
     backdrop-filter:blur(20px);
+
     box-shadow:
     0 0 40px rgba(255,0,102,0.25),
     0 20px 60px rgba(0,0,0,0.6);
+
     animation:fadeUp 1s ease;
 }
 
 @keyframes fadeUp{
+
     from{
         opacity:0;
         transform:translateY(40px);
@@ -78,6 +93,8 @@ body{
         transform:translateY(0);
     }
 }
+
+/* TOP BAR */
 
 .top-bar{
     display:flex;
@@ -90,16 +107,24 @@ body{
     font-size:14px;
 }
 
+/* IMAGE */
+
 .album{
+
     width:100%;
+
     border-radius:25px;
+
     object-fit:cover;
+
     box-shadow:
     0 20px 50px rgba(0,0,0,0.6);
+
     animation:float 5s ease-in-out infinite;
 }
 
 @keyframes float{
+
     0%,100%{
         transform:translateY(0px);
     }
@@ -109,101 +134,172 @@ body{
     }
 }
 
+/* TEXT */
+
 .song-title{
+
     margin-top:25px;
+
     font-size:32px;
+
     font-weight:700;
 }
 
 .artist{
+
     color:#b3b3b3;
+
     margin-top:5px;
+
     font-size:15px;
 }
 
+/* PROGRESS BAR */
+
 .progress{
+
     width:100%;
+
     height:6px;
+
     background:#404040;
+
     border-radius:20px;
+
     margin-top:30px;
+
     overflow:hidden;
 }
 
 .progress-fill{
+
     width:70%;
+
     height:100%;
+
     background:#ff4d88;
+
     border-radius:20px;
 }
 
+/* TIME */
+
 .time{
+
     display:flex;
+
     justify-content:space-between;
+
     margin-top:8px;
+
     color:#b3b3b3;
+
     font-size:13px;
 }
 
+/* CONTROLS */
+
 .controls{
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
+
     gap:25px;
+
     margin-top:30px;
 }
 
 .control-btn{
+
     font-size:28px;
+
     cursor:pointer;
+
     transition:0.3s;
 }
 
 .control-btn:hover{
+
     transform:scale(1.2);
 }
 
+/* PLAY BUTTON */
+
 .play-btn{
+
     width:75px;
+
     height:75px;
+
     border-radius:50%;
+
     border:none;
+
     background:#1DB954;
+
     color:white;
+
     font-size:32px;
+
     cursor:pointer;
+
     box-shadow:
     0 0 30px rgba(29,185,84,0.5);
+
     transition:0.3s;
 }
 
 .play-btn:hover{
+
     transform:scale(1.08);
 }
 
+/* MESSAGE */
+
 .message{
+
     margin-top:35px;
+
     line-height:1.9;
+
     color:#e3e3e3;
+
     font-size:15px;
+
     text-align:center;
 }
 
+/* FOOTER */
+
 .footer{
+
     margin-top:30px;
+
     text-align:center;
+
     color:#888;
+
     font-size:13px;
 }
 
+/* HEARTS */
+
 .heart{
+
     position:fixed;
+
     color:#ff4d88;
+
     opacity:0.7;
+
     animation:floatHeart linear infinite;
 }
 
 @keyframes floatHeart{
+
     from{
         transform:translateY(100vh);
     }
@@ -212,6 +308,8 @@ body{
         transform:translateY(-120vh);
     }
 }
+
+/* MOBILE */
 
 @media(max-width:500px){
 
@@ -254,7 +352,7 @@ body{
 
 </div>
 
-<img src="image.love" class="album">
+<img src="imagelove.jpeg" class="album">
 
 <div class="song-title">
 Astha Saksena ❤️
@@ -342,6 +440,8 @@ function toggleMusic(){
         playButton.innerHTML = "▶";
     }
 }
+
+/* HEARTS */
 
 function createHeart(){
 
